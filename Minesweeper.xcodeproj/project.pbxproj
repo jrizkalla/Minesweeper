@@ -7,19 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081052161CDFDC1E006DD9CB /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081052151CDFDC1E006DD9CB /* BoardView.swift */; };
+		081052191CE15E43006DD9CB /* BoardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081052181CE15E43006DD9CB /* BoardTheme.swift */; };
+		0810521B1CE15F75006DD9CB /* SimpleTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0810521A1CE15F75006DD9CB /* SimpleTheme.swift */; };
 		08DC7E1A1CDE2D8600909468 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC7E191CDE2D8600909468 /* AppDelegate.swift */; };
 		08DC7E1C1CDE2D8600909468 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC7E1B1CDE2D8600909468 /* ViewController.swift */; };
 		08DC7E1E1CDE2D8600909468 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DC7E1D1CDE2D8600909468 /* Assets.xcassets */; };
 		08DC7E211CDE2D8600909468 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08DC7E1F1CDE2D8600909468 /* Main.storyboard */; };
+		08DC7E2A1CDE2E0100909468 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC7E291CDE2E0100909468 /* Board.swift */; };
+		08DC7E2C1CDE3A0D00909468 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC7E2B1CDE3A0D00909468 /* Tile.swift */; };
+		08DC7E2E1CDE438200909468 /* BoardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC7E2D1CDE438200909468 /* BoardObserver.swift */; };
+		08DC7E311CDEE22800909468 /* tui.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC7E301CDEE22800909468 /* tui.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		081052151CDFDC1E006DD9CB /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardView.swift; path = views/BoardView.swift; sourceTree = "<group>"; };
+		081052181CE15E43006DD9CB /* BoardTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardTheme.swift; path = views/themes/BoardTheme.swift; sourceTree = "<group>"; };
+		0810521A1CE15F75006DD9CB /* SimpleTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleTheme.swift; path = views/themes/SimpleTheme.swift; sourceTree = "<group>"; };
 		08DC7E161CDE2D8600909468 /* Minesweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minesweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DC7E191CDE2D8600909468 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08DC7E1B1CDE2D8600909468 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		08DC7E1D1CDE2D8600909468 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08DC7E201CDE2D8600909468 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08DC7E221CDE2D8600909468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08DC7E291CDE2E0100909468 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		08DC7E2B1CDE3A0D00909468 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		08DC7E2D1CDE438200909468 /* BoardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardObserver.swift; sourceTree = "<group>"; };
+		08DC7E301CDEE22800909468 /* tui.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tui.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +47,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		081052141CDFDC09006DD9CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				081052171CE15E22006DD9CB /* Themes */,
+				081052151CDFDC1E006DD9CB /* BoardView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		081052171CE15E22006DD9CB /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				081052181CE15E43006DD9CB /* BoardTheme.swift */,
+				0810521A1CE15F75006DD9CB /* SimpleTheme.swift */,
+			);
+			name = Themes;
+			sourceTree = "<group>";
+		};
 		08DC7E0D1CDE2D8600909468 = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +84,9 @@
 		08DC7E181CDE2D8600909468 /* Minesweeper */ = {
 			isa = PBXGroup;
 			children = (
+				081052141CDFDC09006DD9CB /* Views */,
+				08DC7E2F1CDEE20900909468 /* TUI */,
+				08DC7E281CDE2DEC00909468 /* Model */,
 				08DC7E191CDE2D8600909468 /* AppDelegate.swift */,
 				08DC7E1B1CDE2D8600909468 /* ViewController.swift */,
 				08DC7E1D1CDE2D8600909468 /* Assets.xcassets */,
@@ -59,6 +94,24 @@
 				08DC7E221CDE2D8600909468 /* Info.plist */,
 			);
 			path = Minesweeper;
+			sourceTree = "<group>";
+		};
+		08DC7E281CDE2DEC00909468 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				08DC7E291CDE2E0100909468 /* Board.swift */,
+				08DC7E2B1CDE3A0D00909468 /* Tile.swift */,
+				08DC7E2D1CDE438200909468 /* BoardObserver.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		08DC7E2F1CDEE20900909468 /* TUI */ = {
+			isa = PBXGroup;
+			children = (
+				08DC7E301CDEE22800909468 /* tui.swift */,
+			);
+			name = TUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +184,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0810521B1CE15F75006DD9CB /* SimpleTheme.swift in Sources */,
+				081052161CDFDC1E006DD9CB /* BoardView.swift in Sources */,
+				081052191CE15E43006DD9CB /* BoardTheme.swift in Sources */,
 				08DC7E1C1CDE2D8600909468 /* ViewController.swift in Sources */,
 				08DC7E1A1CDE2D8600909468 /* AppDelegate.swift in Sources */,
+				08DC7E311CDEE22800909468 /* tui.swift in Sources */,
+				08DC7E2A1CDE2E0100909468 /* Board.swift in Sources */,
+				08DC7E2E1CDE438200909468 /* BoardObserver.swift in Sources */,
+				08DC7E2C1CDE3A0D00909468 /* Tile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +335,7 @@
 				08DC7E271CDE2D8600909468 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
