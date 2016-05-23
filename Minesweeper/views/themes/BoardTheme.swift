@@ -12,7 +12,15 @@ protocol BoardTheme {
     var requiresSquare: Bool { get };
     
     /**
-        Draw a tile in the specififed rectangle **without the border**
+        The owner of the theme. Will be set at initialization before any of the protocol's methods
+        are called.
+        Must be weak to avoid circular references
+     */
+    weak var owner: BoardView! { get set };
+    
+    /**
+        Draw a tile in the specififed rectangle **without the border**.
+        - Warning: the tile (and whole board) may not always be a valid board. Even though tile.realValue should not return .Hidden, it may do so in the board (see BoardView.Initializer)
         - Parameters:
             - rect: the `NSRect` to draw in
             - tile: the `Board.UserTile` to draw
@@ -30,4 +38,13 @@ protocol BoardTheme {
             - end: the end point of the border line
      */
     func drawBorderLineWithWidth(width: CGFloat, start: CGPoint, end: CGPoint);
+    
+    /**
+        If this theme `requiresSquare`, there might be some parts of the "background" visible
+        (if the shape of the theme is not a square).
+        This method gets called to draw the visible parts.
+        If this theme does not `requireSquare`, then this method never gets called.
+        - Parameter rect: the `NSRect` to draw
+     */
+    func drawBackgroundRect(rect: NSRect);
 }

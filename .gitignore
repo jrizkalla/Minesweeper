@@ -1,0 +1,28 @@
+
+# general files
+*.swp
+*.swo
+.DS_Store
+
+*/*.swp
+*/*.swo
+*/.DS_Store
+
+*/*/*.swp
+*/*/*.swo
+*/*/.DS_Store
+
+*/*/*/*.swp
+*/*/*/*.swo
+*/*/*/.DS_Store
+
+
+# swift files
+DerivedData/*
+
+*/DerivedData/*
+
+*/*/DerivedData/*
+
+*/*/*/DerivedData/*
+

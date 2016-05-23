@@ -101,6 +101,22 @@ public class Board {
     }
     
     /**
+        Creates an empty board (all the tiles are hidden)
+        - Parameters:
+            - width: the width of the board. Must be greater than 0
+            - height: the height of the board. Must be greater than 0
+        - Returns: a board in an invalid state. **Attempts to pressTile in the returned board will probably crash**.
+        - Throws: `Error.IllegalArgument` if some of the preconditions are not met
+     */
+    public class func createEmptyBoard(width: Int, height: Int) throws -> Board {
+        guard height > 0 && width > 0 else {
+            throw Error.IllegalArgument(reason: "width and height must be greater than 0");
+        }
+        
+        return Board(width: width, height: height, numBombs: 0);
+    }
+    
+    /**
         Creates a random board
         - Parameters:
             - width: the width of the board
@@ -108,10 +124,11 @@ public class Board {
             - numBombs: the number of bombs. Must be less than `(width * height) - 9` and more than 0
             - x: the x coordinate of the starting point (that does not have any bombs)
             - y: the y coordinate of the starting point (that does not have any bombs)
+        - Returns: a fully initialized board
         - Throws: `Error.IllegalArgument` if some of the preconditions are not met
      */
     public class func createRandomBoard(width: Int, height: Int, numBombs: Int, x: Int, y: Int) throws -> Board {
-        if width < 3 || height < 3 || (numBombs > (width * height - 3 * 3)){
+        guard width >= 3 && height >= 3 && (numBombs <= (width * height - 3 * 3)) else {
             throw Error.IllegalArgument(reason: "The board is too small or there are too many bombs");
         }
         
@@ -256,7 +273,7 @@ public class Board {
         - Parameter y: y the y coordinate
      */
     public func flagTile(x x: Int, y: Int) throws {
-        if (x < 0 || x >= width) || (y < 0 || y >= height){
+        guard (x >= 0 && x < width) && (y >= 0 && y < height) else {
             throw Error.IllegalArgument(reason: "Illegal values of x and/or y");
         }
         
@@ -299,7 +316,7 @@ public class Board {
         - Parameter y: the y coordinate of the tile
      */
     public func pressTile(x x: Int, y: Int) throws {
-        if (x < 0 || x >= width) || (y < 0 || y >= height) {
+        guard (x >= 0 && x < width) && (y >= 0 && y < height) else {
             throw Error.IllegalArgument(reason: "Illegal values of x and/or y");
         }
         
@@ -313,19 +330,41 @@ public class Board {
             return;
         } else if board[x][y].isHidden && !board[x][y].isFlagged && board[x][y].realValue == .Blank {
             // Hidden, unflagged blank
-            board[x][y].isHidden = false;
-            numRevealed += 1;
-            observers.forEach(){ $0.tileChanged(x: x, y: y, tile: board[x][y]) };
-            if numRevealed == (width * height - numBombs) {
-                // game won
-                observers.forEach() { $0.gameWon(x: x, y: y); };
-            }
-            // reveal all the surrounding
-            self.forAllNeighbours(x: x, y: y) {
-                if $2.isHidden {
-                    try! self.pressTile(x: $0, y: $1);
+            // We have to press all the neighbours of (x, y).
+            // Unfortunately, for large boards with few tiles (200 * 200 with 1% bombs for example)
+            // this leads to a LOT of recursion and eventually a stack overflow (oh no!)
+            
+            // So, instead, we're going to do recursion in a stupid but efficient way
+            // we're manually going to keep a stack...
+            var stack = [(x: Int, y: Int)]();
+            stack.append((x: x, y: y));
+            
+            var maxStackSize = 0;
+            while stack.count > 0 {
+                let (x, y) = stack.removeFirst();
+                board[x][y].isHidden = false;
+                numRevealed += 1;
+                observers.forEach(){ $0.tileChanged(x: x, y: y, tile: board[x][y]) };
+                if numRevealed == (width * height - numBombs) {
+                    // game won
+                    observers.forEach() { $0.gameWon(x: x, y: y); };
+                }
+                // reveal all the surrounding
+                if board[x][y].realValue == .Blank {
+                    self.forAllNeighbours(x: x, y: y) {
+                        if $2.isHidden {
+                            self.board[$0][$1].isHidden = false;
+                            stack.append((x: $0, y: $1));
+                        }
+                    }
+                }
+                
+                if stack.count > maxStackSize {
+                    maxStackSize = stack.count
                 }
             }
+            
+            print("Max stack size: \(maxStackSize)");
         } else if board[x][y].isHidden && !board[x][y].isFlagged { // Just a number or blank tile
             // hidden, unflagged number
             board[x][y].isHidden = false;
