@@ -7,42 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		081052161CDFDC1E006DD9CB /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081052151CDFDC1E006DD9CB /* BoardView.swift */; };
-		081052191CE15E43006DD9CB /* BoardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081052181CE15E43006DD9CB /* BoardTheme.swift */; };
-		0810521B1CE15F75006DD9CB /* SimpleTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0810521A1CE15F75006DD9CB /* SimpleTheme.swift */; };
-		08B144911CEFF178000E6792 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1448F1CEFF178000E6792 /* Main.swift */; };
+		082F74611CF39082006D6D1E /* BoardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082F745F1CF39082006D6D1E /* BoardTheme.swift */; };
+		082F74621CF39082006D6D1E /* SimpleTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082F74601CF39082006D6D1E /* SimpleTheme.swift */; };
+		082F74651CF3908B006D6D1E /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082F74631CF3908B006D6D1E /* BoardView.swift */; };
+		082F74661CF3908B006D6D1E /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082F74641CF3908B006D6D1E /* BoardViewController.swift */; };
+		082F746A1CF390A7006D6D1E /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082F74671CF390A7006D6D1E /* Board.swift */; };
+		082F746B1CF390A7006D6D1E /* BoardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082F74681CF390A7006D6D1E /* BoardObserver.swift */; };
+		082F746C1CF390A7006D6D1E /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082F74691CF390A7006D6D1E /* Tile.swift */; };
 		08B144921CEFF178000E6792 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B144901CEFF178000E6792 /* Main.xib */; };
-		08B144961CEFFB25000E6792 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B144941CEFFB25000E6792 /* MainWindow.swift */; };
-		08B144971CEFFB25000E6792 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B144951CEFFB25000E6792 /* MainWindow.xib */; };
-		08B144991CEFFCD2000E6792 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B144981CEFFCD2000E6792 /* BoardViewController.swift */; };
 		08DC7E1A1CDE2D8600909468 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC7E191CDE2D8600909468 /* AppDelegate.swift */; };
-		08DC7E1C1CDE2D8600909468 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC7E1B1CDE2D8600909468 /* ViewController.swift */; };
 		08DC7E1E1CDE2D8600909468 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DC7E1D1CDE2D8600909468 /* Assets.xcassets */; };
-		08DC7E2A1CDE2E0100909468 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC7E291CDE2E0100909468 /* Board.swift */; };
-		08DC7E2C1CDE3A0D00909468 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC7E2B1CDE3A0D00909468 /* Tile.swift */; };
-		08DC7E2E1CDE438200909468 /* BoardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC7E2D1CDE438200909468 /* BoardObserver.swift */; };
 		08DC7E311CDEE22800909468 /* tui.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC7E301CDEE22800909468 /* tui.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		081052151CDFDC1E006DD9CB /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardView.swift; path = views/BoardView.swift; sourceTree = "<group>"; };
-		081052181CE15E43006DD9CB /* BoardTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardTheme.swift; path = views/themes/BoardTheme.swift; sourceTree = "<group>"; };
-		0810521A1CE15F75006DD9CB /* SimpleTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleTheme.swift; path = views/themes/SimpleTheme.swift; sourceTree = "<group>"; };
+		082F745F1CF39082006D6D1E /* BoardTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardTheme.swift; path = GUI/themes/BoardTheme.swift; sourceTree = "<group>"; };
+		082F74601CF39082006D6D1E /* SimpleTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleTheme.swift; path = GUI/themes/SimpleTheme.swift; sourceTree = "<group>"; };
+		082F74631CF3908B006D6D1E /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardView.swift; path = GUI/BoardView.swift; sourceTree = "<group>"; };
+		082F74641CF3908B006D6D1E /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardViewController.swift; path = GUI/BoardViewController.swift; sourceTree = "<group>"; };
+		082F74671CF390A7006D6D1E /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Board.swift; path = Model/Board.swift; sourceTree = "<group>"; };
+		082F74681CF390A7006D6D1E /* BoardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardObserver.swift; path = Model/BoardObserver.swift; sourceTree = "<group>"; };
+		082F74691CF390A7006D6D1E /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tile.swift; path = Model/Tile.swift; sourceTree = "<group>"; };
 		08B1448E1CEFEF57000E6792 /* Minesweeper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Minesweeper.entitlements; sourceTree = "<group>"; };
-		08B1448F1CEFF178000E6792 /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		08B144901CEFF178000E6792 /* Main.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Main.xib; sourceTree = "<group>"; };
-		08B144941CEFFB25000E6792 /* MainWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainWindow.swift; path = Minesweeper/viewcontrollers/MainWindow.swift; sourceTree = "<group>"; };
-		08B144951CEFFB25000E6792 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = Minesweeper/viewcontrollers/MainWindow.xib; sourceTree = "<group>"; };
-		08B144981CEFFCD2000E6792 /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardViewController.swift; path = Minesweeper/viewcontrollers/BoardViewController.swift; sourceTree = "<group>"; };
 		08DC7E161CDE2D8600909468 /* Minesweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minesweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DC7E191CDE2D8600909468 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		08DC7E1B1CDE2D8600909468 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		08DC7E1D1CDE2D8600909468 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08DC7E201CDE2D8600909468 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08DC7E221CDE2D8600909468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		08DC7E291CDE2E0100909468 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
-		08DC7E2B1CDE3A0D00909468 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
-		08DC7E2D1CDE438200909468 /* BoardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardObserver.swift; sourceTree = "<group>"; };
 		08DC7E301CDEE22800909468 /* tui.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tui.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,33 +49,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		081052141CDFDC09006DD9CB /* Views */ = {
+		081052141CDFDC09006DD9CB /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				08DC7E281CDE2DEC00909468 /* Model */,
+				08B144901CEFF178000E6792 /* Main.xib */,
+				082F74631CF3908B006D6D1E /* BoardView.swift */,
+				082F74641CF3908B006D6D1E /* BoardViewController.swift */,
 				081052171CE15E22006DD9CB /* Themes */,
-				081052151CDFDC1E006DD9CB /* BoardView.swift */,
 			);
-			name = Views;
+			name = GUI;
 			sourceTree = "<group>";
 		};
 		081052171CE15E22006DD9CB /* Themes */ = {
 			isa = PBXGroup;
 			children = (
-				081052181CE15E43006DD9CB /* BoardTheme.swift */,
-				0810521A1CE15F75006DD9CB /* SimpleTheme.swift */,
+				082F745F1CF39082006D6D1E /* BoardTheme.swift */,
+				082F74601CF39082006D6D1E /* SimpleTheme.swift */,
 			);
 			name = Themes;
-			sourceTree = "<group>";
-		};
-		08B144931CEFFAFD000E6792 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				08B144941CEFFB25000E6792 /* MainWindow.swift */,
-				08B144951CEFFB25000E6792 /* MainWindow.xib */,
-				08B144981CEFFCD2000E6792 /* BoardViewController.swift */,
-			);
-			name = ViewControllers;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		08DC7E0D1CDE2D8600909468 = {
@@ -107,13 +91,8 @@
 			children = (
 				08B1448E1CEFEF57000E6792 /* Minesweeper.entitlements */,
 				08DC7E2F1CDEE20900909468 /* TUI */,
-				08B144931CEFFAFD000E6792 /* ViewControllers */,
-				081052141CDFDC09006DD9CB /* Views */,
-				08DC7E281CDE2DEC00909468 /* Model */,
+				081052141CDFDC09006DD9CB /* GUI */,
 				08DC7E191CDE2D8600909468 /* AppDelegate.swift */,
-				08DC7E1B1CDE2D8600909468 /* ViewController.swift */,
-				08B1448F1CEFF178000E6792 /* Main.swift */,
-				08B144901CEFF178000E6792 /* Main.xib */,
 				08DC7E1D1CDE2D8600909468 /* Assets.xcassets */,
 				08DC7E1F1CDE2D8600909468 /* Main.storyboard */,
 				08DC7E221CDE2D8600909468 /* Info.plist */,
@@ -124,9 +103,9 @@
 		08DC7E281CDE2DEC00909468 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				08DC7E291CDE2E0100909468 /* Board.swift */,
-				08DC7E2B1CDE3A0D00909468 /* Tile.swift */,
-				08DC7E2D1CDE438200909468 /* BoardObserver.swift */,
+				082F74671CF390A7006D6D1E /* Board.swift */,
+				082F74681CF390A7006D6D1E /* BoardObserver.swift */,
+				082F74691CF390A7006D6D1E /* Tile.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -204,7 +183,6 @@
 			files = (
 				08DC7E1E1CDE2D8600909468 /* Assets.xcassets in Resources */,
 				08B144921CEFF178000E6792 /* Main.xib in Resources */,
-				08B144971CEFFB25000E6792 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,18 +193,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0810521B1CE15F75006DD9CB /* SimpleTheme.swift in Sources */,
-				081052161CDFDC1E006DD9CB /* BoardView.swift in Sources */,
-				08B144911CEFF178000E6792 /* Main.swift in Sources */,
-				081052191CE15E43006DD9CB /* BoardTheme.swift in Sources */,
-				08DC7E1C1CDE2D8600909468 /* ViewController.swift in Sources */,
+				082F74621CF39082006D6D1E /* SimpleTheme.swift in Sources */,
+				082F74661CF3908B006D6D1E /* BoardViewController.swift in Sources */,
 				08DC7E1A1CDE2D8600909468 /* AppDelegate.swift in Sources */,
 				08DC7E311CDEE22800909468 /* tui.swift in Sources */,
-				08DC7E2A1CDE2E0100909468 /* Board.swift in Sources */,
-				08DC7E2E1CDE438200909468 /* BoardObserver.swift in Sources */,
-				08B144961CEFFB25000E6792 /* MainWindow.swift in Sources */,
-				08DC7E2C1CDE3A0D00909468 /* Tile.swift in Sources */,
-				08B144991CEFFCD2000E6792 /* BoardViewController.swift in Sources */,
+				082F74651CF3908B006D6D1E /* BoardView.swift in Sources */,
+				082F74611CF39082006D6D1E /* BoardTheme.swift in Sources */,
+				082F746B1CF390A7006D6D1E /* BoardObserver.swift in Sources */,
+				082F746C1CF390A7006D6D1E /* Tile.swift in Sources */,
+				082F746A1CF390A7006D6D1E /* Board.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

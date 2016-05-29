@@ -27,7 +27,7 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2016 John Rizkalla. All rights reserved.</string>
 	<key>NSMainNibFile</key>
-	<string>MainWindow</string>
+	<string>Main.nib</string>
 	<key>CFBundleDisplayName</key>
 	<string></string>
 	<key>LSApplicationCategoryType</key>

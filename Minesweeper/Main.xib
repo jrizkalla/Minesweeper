@@ -11,13 +11,13 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="083-zl-h81">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="131" y="165" width="500" height="506"/>
+            <rect key="contentRect" x="131" y="165" width="576" height="506"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
             <view key="contentView" id="JAL-w9-ibb">
-                <rect key="frame" x="0.0" y="0.0" width="500" height="506"/>
+                <rect key="frame" x="0.0" y="0.0" width="576" height="506"/>
                 <autoresizingMask key="autoresizingMask"/>
             </view>
-            <point key="canvasLocation" x="67" y="39"/>
+            <point key="canvasLocation" x="105" y="39"/>
         </window>
         <application id="SHY-5G-um5">
             <menu key="mainMenu" title="Main Menu" systemMenu="main" id="ta1-Gm-HR7">
@@ -651,5 +651,10 @@
             </menu>
             <point key="canvasLocation" x="75" y="0.0"/>
         </application>
+        <viewController id="VHn-LF-yT7" customClass="BoardViewController" customModule="Minesweeper" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="JAL-w9-ibb" id="YB5-7z-QaP"/>
+            </connections>
+        </viewController>
     </objects>
 </document>
